@@ -6,6 +6,9 @@ OBJS:=$(CFILES:%.cpp=%.o)
 EXECUTABLE=helloworld
 
 all:$(OBJS)
-		$(CC) $(OBJS) -o $(EXECUTABLE)
+	$(CC) $(OBJS) -o $(EXECUTABLE)
 $(OBJS):$(CFILES)
-		$(CC) $(FLAGS) $(CFILES)
+	$(CC) $(FLAGS) $(CFILES)
+clean:
+	rm *.o
+	rm $(EXECUTABLE)
